@@ -1,0 +1,26 @@
+/*
+ *
+ *  Game CSS
+ *
+*/
+
+body {
+    background-color: gray;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.game-container {
+    position: relative;
+    width: 352px;
+    height: 198;
+    margin: 0 auto;
+    outline: 1px solid white;
+
+    transform: scale(3) translateY(50%);
+}
+
+.game-canvas {
+    image-rendering: pixelated;
+}
