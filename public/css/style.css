@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #150734;
+    font-family: 'Exo', sans-serif;
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+li, a, button {
+    font-family: 'Exo', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-links li a {
+    font-weight: 800;
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+    color: rgba(255, 255, 255, 0.74);
+}
+
+/* Presentation */
+
+.presentation {
+    padding: 3vh 5vw;
+    margin: 6% 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.presentation h1 {
+    margin: 1rem 0;
+    font-weight: 800;
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.presentation h5 {
+    margin: 0 1.5rem;
+    font-weight: 200;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.left-section {
+    margin: 5% 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.right-section {
+    margin: 5% 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.glass {
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    box-shadow: 6px 6px 20px rgb(0, 0, 0, 0.212);
+    border-radius: 2rem;
+    backdrop-filter: blur(2rem);
+}
+
+.text {
+    text-align: justify;
+    margin: 0 4%;
+    font-weight: 100;
+    font-size: 1.5vw;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.info1 {
+    width: 50%;
+    height: 17vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.info1 h1 {
+    margin: 0 6%;
+    font-weight: 800;
+    font-size: 2.5vw;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.info2 {
+    width: 50%;
+    height: 17vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.info2 h1 {
+    margin: 0 6%;
+    font-weight: 800;
+    font-size: 2.5vw;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+}
