@@ -21,14 +21,15 @@ window.OverworldMaps = {
         lowerSrc: "/game/ressources/image/Spawn.png",
         upperSrc: "",
         gameObjects: {
-            player: new GameObject({
+            player: new Person({
                 x: 0,
                 y: 0,
+                isPlayerControlled: true,
                 src: "/game/ressources/image/spike.png"
             }),
-            npc: new GameObject({
-                x: 7,
-                y: 7,
+            npc: new Person({
+                x: 100,
+                y: 100,
                 src: "/game/ressources/image/spike.png"
             })
         }
