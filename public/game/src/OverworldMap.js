@@ -18,12 +18,12 @@ class OverworldMap {
 
 window.OverworldMaps = {
     Spawn: {
-        lowerSrc: "/game/ressources/image/Spawn.png",
+        lowerSrc: "/game/ressources/image/spawn.png",
         upperSrc: "",
         gameObjects: {
             player: new Person({
-                x: 0,
-                y: 0,
+                x: 50,
+                y: 50,
                 isPlayerControlled: true,
                 src: "/game/ressources/image/spike.png"
             }),
