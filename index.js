@@ -7,6 +7,7 @@ const { Server } = require("socket.io");
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
+const socket = require("./src/socket/main");
 
 app.use(express.static('public'));
 app.use('/css', express.static(__dirname + 'public/css'));
@@ -21,6 +22,8 @@ app.use('/', require(__dirname+'/src/routes/page.js'));
 
 app.set('view engine', 'ejs');
 app.set('views', './views');
+
+socket.mainsocket(io);
 
 server.listen(3000, () => {
     console.log("Server started on port 3000");
