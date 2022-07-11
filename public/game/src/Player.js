@@ -1,9 +1,7 @@
-class Person extends GameObject {
+class Player extends GameObject {
     constructor(config) {
         super(config);
         this.movingProgressRemaining = 0;
-
-        this.isPlayerControlled = false;
 
         this.moved = true;
 
@@ -19,7 +17,7 @@ class Person extends GameObject {
         this.updateSprite(state);
         this.updatePosition();
 
-        if (this.isPlayerControlled && state.arrow && this.moved) {
+        if (state.arrow && this.moved) {
             this.direction = state.arrow;
             this.moved = false;
         }
@@ -34,7 +32,7 @@ class Person extends GameObject {
     }
 
     updateSprite(state) {
-        if (this.isPlayerControlled && this.moved && !state.arrow) {
+        if (this.moved && !state.arrow) {
             this.sprite.setAnimation("idle-"+this.direction);
             return;
         }
@@ -44,6 +42,6 @@ class Person extends GameObject {
     }
 
     draw(ctx, cameraPerson, width, height, mapWidth, mapHeight) {
-        this.sprite.draw(ctx, cameraPerson, width, height, mapWidth, mapHeight);
+        this.sprite.drawPlayer(ctx, cameraPerson, width, height, mapWidth, mapHeight);
     }
 }

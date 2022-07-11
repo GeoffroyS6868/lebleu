@@ -11,16 +11,17 @@ body {
     overflow: hidden;
 }
 
-.game-container {
+/*.game-container {
     position: relative;
-    width: 320px;
-    height: 320px;
+    width: 1280px;
+    height: 900px;
     margin: 0 auto;
     outline: 1px solid white;
 
-    transform: scale(3) translateY(34%);
-}
+    transform: scale(1) translateY(5%);
+}*/
 
 .game-canvas {
+    margin: 0 auto;
     image-rendering: pixelated;
 }

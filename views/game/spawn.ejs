@@ -6,13 +6,17 @@
     </head>
     <body>
         <div class="game-container">
-            <canvas class="game-canvas" width="320" height="320"></canvas>
+            <canvas class="game-canvas"></canvas>
         </div>
 
         <!-- Script -->
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/game/src/serverConnection.js"></script>
+        <script src="/game/src/utils.js"></script>
         <script src="/game/src/DirectionInput.js"></script>
         <script src="/game/src/Overworld.js"></script>
         <script src="/game/src/GameObject.js"></script>
+        <script src="/game/src/Player.js"></script>
         <script src="/game/src/Person.js"></script>
         <script src="/game/src/Sprite.js"></script>
         <script src="/game/src/OverworldMap.js"></script>

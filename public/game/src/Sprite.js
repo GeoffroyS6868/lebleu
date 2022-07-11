@@ -20,7 +20,7 @@ class Sprite {
         this.currentAnimation = config.currenAnimation || "idle-down";
         this.currentAnimationFrame = 0;
 
-        this.animationFrameLimit = config.animationFrameLimit || 12;
+        this.animationFrameLimit = config.animationFrameLimit || 18;
         this.animationFrameProgress = this.animationFrameLimit;
 
         this.gameObject = config.gameObject;
@@ -52,18 +52,42 @@ class Sprite {
         }
     }
 
-    draw(ctx) {
-        const x = this.gameObject.x - 18 / 2;
-        const y = this.gameObject.y - 32 / 2;
+    drawPlayer(ctx, cameraPerson, width, height, mapWidth, mapHeight) {
+        var x = this.gameObject.x - 72 / 2 + (width / 2) - cameraPerson.x;
+        var y = this.gameObject.y - 128 / 2 + (height / 2) - cameraPerson.y;
 
+        if (this.gameObject.x < (width / 2))
+            x = this.gameObject.x - 72 / 2;
+        if (this.gameObject.y < (height / 2))
+            y = this.gameObject.y - 128 / 2;
         const [frameX, frameY] = this.frame;
 
         this.isLoaded && ctx.drawImage(
             this.image,
-            frameX * 18, frameY * 32,
-            18, 32,
+            frameX * 72, frameY * 128,
+            72, 128,
             x, y,
-            18, 32
+            72, 128
+        );
+        this.updateAnimationProgress();
+    }
+
+    draw(ctx, cameraPerson, width, height, mapWidth, mapHeight) {
+        var x = this.gameObject.x - 72 / 2 + (width / 2) - cameraPerson.x;
+        var y = this.gameObject.y - 128 / 2 + (height / 2) - cameraPerson.y;
+
+        if (cameraPerson.x < (width / 2))
+            x = this.gameObject.x - 72 / 2;
+        if (cameraPerson.y < (height / 2))
+            y = this.gameObject.y - 128 / 2;
+        const [frameX, frameY] = this.frame;
+
+        this.isLoaded && ctx.drawImage(
+            this.image,
+            frameX * 72, frameY * 128,
+            72, 128,
+            x, y,
+            72, 128
         );
         this.updateAnimationProgress();
     }
