@@ -62,6 +62,7 @@ class Sprite {
             y = this.gameObject.y - 128 / 2;
         const [frameX, frameY] = this.frame;
 
+        //console.log(x, y, "where", this.gameObject.x, this.gameObject.y);
         this.isLoaded && ctx.drawImage(
             this.image,
             frameX * 72, frameY * 128,
